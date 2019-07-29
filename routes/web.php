@@ -16,5 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('login/okta', 'Auth\LoginController@redirectToProvider')->name('login-okta');
+Route::get('login/okta/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index')->name('home');

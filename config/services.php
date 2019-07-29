@@ -44,4 +44,11 @@ return [
         ],
     ],
 
+    'okta' => [
+        'client_id' => env('OKTA_CLIENT_ID'),
+        'client_secret' => env('OKTA_CLIENT_SECRET'),
+        'redirect' => env('OKTA_REDIRECT_URI'),
+        'base_url' => env('OKTA_BASE_URL')
+    ],
+
 ];
