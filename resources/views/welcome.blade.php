@@ -79,9 +79,15 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                    @auth
+                        <p>You are logged in as {{ Auth::user()->name }}!</p>
+                    @endauth
                 </div>
 
                 <div class="links">
+                    @auth
+                        <a href="{{ route('personal-home') }}">Personal Home Page</a>
+                    @endauth
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

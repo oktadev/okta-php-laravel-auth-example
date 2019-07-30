@@ -20,3 +20,4 @@ Route::get('login/okta', 'Auth\LoginController@redirectToProvider')->name('login
 Route::get('login/okta/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/personal-home', 'HomeController@personal')->name('personal-home')->middleware('auth');
